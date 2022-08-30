@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <style>
+            .card{
+                border: 1px solid black;
+            }
+            body{
+                background: rgb(196, 200, 228);
+            }
+            .primary{
+                color:chartreuse
+            }
+            .secondary{
+                color: yellow;
+            }
+            .danger{
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1>Assignments-4</h1>
+            <% for(let i=0;i<user.length;i++) { %>
+                <div class="card">
+                    <div class="card-item <%= getClass(user[i].isPromoted)%>"><%= user[i].name %></div>
+                    <div class="card-item  <%= getClass(user[i].isPromoted)%>"><%=user[i].email%></div>
+                    <form method="POST" action="/user/update/<%= user[i].email %>?_method=PUT" name="_method" value="PUT">
+                        <button id="edit-<%= user.name %>" type="submit">Promoted/Demoted</button>
+                    </form>
+                    <form method="POST" action="/user/delete/<%= user[i].email %>?_method=DELETE" name="_method" value="DELETE">
+                        <button id="edit-<%= user.name %>">Delete</button>
+                    </form>
+                          
+                </div>
+
+                <% } %>
+            <a href="/form">Add User</a>
+        </div>
+
+    </body>
+</html>
