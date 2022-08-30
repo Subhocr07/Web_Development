@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+/* The CSS rule below will affect every HTML element on the page:  */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body,input{
+    font-family:'poppins',sans-serif; 
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-color:#85f770;
+    overflow: hidden;
+}
+.forms-container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.title{
+    font-size:2.2rem;
+    color:#468AE2 ;
+    font-style: bold;
+    margin-bottom:10px; 
+}
+.input-field{
+    max-width: 400px;
+    width: 100%;
+    height: 55px;
+    background-color:#9CF88B;
+    margin: 10px 0px;
+    border-radius: 55px;
+    display: grid;
+    grid-template-columns: 15% 85%;
+    padding:0.4rem;
+}
+.input-field i{
+    text-align: center;
+    line-height: 55px;
+    font-size: 1.1rem;
+}
